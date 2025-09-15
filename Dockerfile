@@ -1,5 +1,5 @@
 # Usar una imagen base de Python oficial
-FROM python:3.12-buster
+FROM python:3.12
 
 # Establecer el directorio de trabajo en /app
 WORKDIR /app
