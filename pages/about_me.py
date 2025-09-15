@@ -1,10 +1,25 @@
 import dash
+import numpy as np
+import pandas as pd
+from datetime import datetime
 from dash import dcc, html
-import dash_bootstrap_components as dbc # 👈 Importar DBC en la página
+import dash_bootstrap_components as dbc
+from utils.GanttComponent import *
 
 dash.register_page(__name__, path='/', name='About Me')
 
-layout = dbc.Container( # 👈 Usar un contenedor en la página
+today = datetime.now()
+today_str = today.strftime('%Y-%m-%d')
+
+df = pd.read_csv("assets/datasets/experience.csv", encoding="latin-1", low_memory=False)
+df['Finish'] = np.where(df['Place'].str.contains('Digitas', case=False, na=False), today_str, df['Finish'])
+df['Start_str'] = pd.to_datetime(df['Start'], format='%Y-%m-%d').dt.strftime('%Y-%m-%d')
+df['Finish_str'] = pd.to_datetime(df['Finish'], format='%Y-%m-%d').dt.strftime('%Y-%m-%d')
+
+gantt_trabajo = GanttComponent(dash, df[df['Type'] == 'Work'], id_prefix='gantt-trabajo')
+gantt_educacion = GanttComponent(dash, df[df['Type'] == 'School'], id_prefix='gantt-educacion')
+
+layout = dbc.Container(
     html.Div(children=[
         html.H1("Hello there 👋"),
         html.H2("Thanks for stopping by!"),
@@ -32,11 +47,59 @@ def render_content(tab):
         ])
     elif tab == 'tab-2':
         return html.Div([
-            html.Img(src='assets/input_files/images/school/ipn.png', style={'width': '150px'}),
-            html.H3("Gantt de Educación") # Aquí iría tu función display_interactive_gantt
+            html.H3("My Education Timeline"),
+            gantt_educacion.get_layout()
         ])
     elif tab == 'tab-3':
         return html.Div([
-            html.Img(src='assets/input_files/images/experience/program.jpg', style={'width': '150px'}),
-            html.H3("Gantt de Experiencia") # Aquí iría tu función display_interactive_gantt
+            html.H3("My Experience Timeline"),
+            gantt_trabajo.get_layout()
         ])
+    elif tab == 'tab-4':
+        data = {
+            'categoria': [
+                'Análisis de Datos', 'Análisis de Datos', 'Análisis de Datos',
+                'Desarrollo Web', 'Desarrollo Web',
+                'Automatización', 'Automatización',
+                'Pruebas', 'Web Scraping', 'Web Scraping'
+            ],
+            'libreria': [
+                'Pandas', 'Numpy', 'PySpark',
+                'Django', 'Flask',
+                'Selenium', 'Dash',
+                'Pytest',
+                'BeautifulSoup', 'openpyxl'
+            ],
+            'dominio': [90, 90, 75, 85, 90, 70, 80, 65, 75, 60] # Porcentaje o escala
+        }
+
+        df_librerias = pd.DataFrame(data)
+
+        fig = px.treemap(
+            df_librerias,
+            path=[px.Constant('Librerías de Python'), 'categoria', 'libreria'],
+            values='dominio',
+            color='dominio',
+            color_continuous_scale='bluyl',RdBu
+            title='Dominio de Librerías de Python'
+        )
+
+        return html.Div([
+            dcc.Graph(id="self.graph_id", figure=fig),
+            html.Div(
+                id="self.output_id",
+                style={'margin-top': '20px', 'font-size': '18px'}
+            )
+        ])
+'''
+ ['aggrnyl', 'armyrose', 'balance','bluyl','darkmint'
+             'magenta', 'magma', 'matter', 'mint', 'mrybm', 'mygbm', 'oranges',
+             'orrd', 'oryel', 'oxy', 'peach', 'phase', 'picnic', 'pinkyl',
+             'piyg', 'plasma', 'plotly3', 'portland', 'prgn', 'pubu', 'pubugn',
+             'puor', 'purd', 'purp', 'purples', 'purpor', 'rainbow', 'rdbu',
+             'rdgy', 'rdpu', 'rdylbu', 'rdylgn', 'redor', 'reds', 'solar',
+             'spectral', 'speed', 'sunset', 'sunsetdark', 'teal', 'tealgrn',
+             'tealrose', 'tempo', 'temps', 'thermal', 'tropic', 'turbid',
+             'turbo', 'twilight', 'viridis', 'ylgn', 'ylgnbu', 'ylorbr',
+             'ylorrd']
+'''

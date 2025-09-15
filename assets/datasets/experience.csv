@@ -1,0 +1,84 @@
+Item,Place,Start,Finish,Imagen,Type,Description
+Data Engineer,"Digitas - CDMX, Mexico",2023-09-04,,assets/images/experience/digitas.png,Work,"
+Main activities:
+- Create Python scripts for data processing using libraries like Pandas, Dask, Pyspark.
+- Create SQL queries to search data using SQLAlchemy in Python.
+- Create dashboards for data visualization using plotly, matplotlib, streamlit, PowerBI, Looker Studio.
+- Design and implementation of architectures using cloud services like AWS and Google cloud.
+- Create python scripts to automatizate some daily tasks.
+- Script probabilistic models using scikit-learn
+- Create data pipelines in Python
+- Database design and implementation
+
+Some Projects developed:
+- Create a Web Scrapping using Selenium and BeautifulSoap to extract public metrics of social media posts like Facebook, X, Instagram, Youtube and Pinterest.
+- Create a Dashboard using Streamlit to display data from diferent sources like S3, Google Drive or diferent SQL relational database managements.
+- Automate report creation in Excel or PowerPoint presentations using Python.
+- Create a probabilistic model to measure the probability of a client to buy again a certain product.
+- Create a report and dashboard to mesuare the metrics of diferent marketing strategies.
+- Develop a CRM using AWS service to storage and manipulate data and mailchimp to send masive communications.
+- Create a ETL process using Adobe Campaing to extract data and Python to process it.
+"
+Software Engineer,"Solera - Seville, Spain",2022-09-19,2023-07-07,assets/images/experience/solera.png,Work,"
+Main activities:
+- Develop backend web APIs with Flask and Django.
+- Develop frontend views with React.
+- Deploy and configure servers using Jenkins.
+- Create scripts for database connections using SQLAlchemy.
+- Create automate test using Selenium.
+
+Some Projects developed:
+- Code maintenance and implementation of new features to the main web page product.
+- Automate test with Python and Selenium.
+"
+Data Engineer,"IDS Comercial - CDMX, Mexico",2021-05-03,2022-09-12,assets/images/experience/ids.png,Work,"
+Main activities:
+- Database design and implementation
+- Create Python scripts for data processing.
+- ETL processes using Python and ABInitio.
+- Create SQL queries to search data in diferent database managements.
+- Creation of Linux shell and UNIX scripts.
+
+Some Projects developed:
+- Migrate a ABInitio process to a Python script.
+- Create a pipeline for an ETL process in Python.
+- Create test cases using pytest.
+- Create entity-relation diagrams for future architecture in relational databases.
+"
+Intern,"Banxico - CDMX, Mexico",2019-08-05,2020-02-03,assets/images/experience/banxico.png,Work,"
+Main activities:
+- Database design and implementation
+- Development of scripts in Java for connecting to databases
+- Linux script test
+- Script updates
+
+Some Projects developed:
+- Create a data migration from a data source to another one.
+- Desing the new data source for the migration.
+"
+Online Course,The Coding School - Online,2020-10-01,2021-05-01,assets/images/school/tcs.png,School,"
+Score: 4.5/5.0
+
+Abilities Acquired:
+- Learn the foundations of quantum computing
+- Build tangible computer science skills
+- Engage in real-world ML applications
+- Learn the foundations of quantum cybersecurity
+"
+Bachelor's Degree in Computer Systems,"ESCOM IPN - CDMX, Mexico",2016-02-08,2020-08-17,assets/images/school/escom.png,School,"
+Score: 8.0/10.0
+
+Abilities Acquired:
+- Identify, model, and solve problems in computational systems by applying knowledge of basic sciences and engineering through development methodologies, results analysis, and decision-making.
+- Develop computational systems according to design processes, quality standards, and process optimization.
+- Integrate leadership skills, effective communication, and collaborative work for task planning, goal achievement, and risk analysis.
+- Assume an ethical and critical attitude in their academic performance, considering its economic, social, and environmental impact, recognizing their need for ongoing development.
+"
+Digital Systems Technician,"CECyT 9 - CDMX, Mexico",2013-07-15,2015-07-15,assets/images/school/cecyt9.png,School,"
+Score: 7.5/10.0
+
+Abilities Acquired:
+- Develop practical systems through the analysis, interpretation, and programming of electronic devices for the implementation of automation and process control applications.
+- Analyze the different types of industrial control and instrumentation systems for the selection, implementation, fault detection, and execution of automated processes, including industrial robotics.
+- Provide preventive and corrective maintenance to the hardware and software of computer equipment, correctly utilizing the tools required to achieve quality work.
+"
