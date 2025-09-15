@@ -79,7 +79,7 @@ def render_content(tab):
             path=[px.Constant('Librerías de Python'), 'categoria', 'libreria'],
             values='dominio',
             color='dominio',
-            color_continuous_scale='bluyl',RdBu
+            color_continuous_scale='bluyl',#RdBu
             title='Dominio de Librerías de Python'
         )
 
