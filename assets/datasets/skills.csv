@@ -1,0 +1,98 @@
+category,name,domain,Type
+Data Analysis,Pandas,90,Libraries
+Data Analysis,Numpy,90,Libraries
+Data Analysis,PySpark,70,Libraries
+Data Analysis,Dask,80,Libraries
+Data Analysis,Matplotlib,80,Libraries
+Data Analysis,Seaborn,80,Libraries
+Data Analysis,Scikit-learn,75,Libraries
+Data Analysis,Dash,85,Libraries
+Data Analysis,Streamlit,85,Libraries
+Data Analysis,plotty,85,Libraries
+Data Analysis,scipy,60,Libraries
+Web Development,Django,80,Libraries
+Web Development,Flask,85,Libraries
+Web Development,FastAPI,75,Libraries
+Automatization,Selenium,85,Libraries
+Automatization,pytest,75,Libraries
+Cloud APIs,boto3,80,Libraries
+Cloud APIs,gcloud,90,Libraries
+Cloud APIs,gspread,85,Libraries
+Cloud APIs,googleapiclient,85,Libraries
+Cloud APIs,mailchimp_marketing,75,Libraries
+Database,psycopg2,85,Libraries
+Database,SQLAlchemy,90,Libraries
+Others,Openpyxl,75,Libraries
+Others,pptx,70,Libraries
+Others,BeautifulSoap,90,Libraries
+Others,fitz,70,Libraries
+Others,PySimpleGUI,70,Libraries
+Others,Tkinter,70,Libraries
+Programming Languages,Pyhton,95,Programming Languages
+Programming Languages,Java,70,Programming Languages
+Programming Languages,C#,55,Programming Languages
+Programming Languages,C++,50,Programming Languages
+Programming Languages,C,30,Programming Languages
+Programming Languages,R,60,Programming Languages
+Programming Languages,SQL,90,Programming Languages
+Programming Languages,JavaScript,60,Programming Languages
+GCP,Google Run,85,Cloud
+GCP,Big Query,90,Cloud
+GCP,Google Storage,80,Cloud
+GCP,Cloud Functions,85,Cloud
+GCP,Looker Studio,80,Cloud
+GCP,Compute Engine,75,Cloud
+AWS,S3,85,Cloud
+AWS,Glue,80,Cloud
+AWS,Athena,75,Cloud
+AWS,Lambda,80,Cloud
+AWS,Quicksight,75,Cloud
+AWS,Redshift,70,Cloud
+AWS,EC2,70,Cloud
+Azure,Azure Database,50,Cloud
+Azure,App Services,45,Cloud
+Azure,Virtual Machines,60,Cloud
+BI,Power BI,75,BI
+BI,Tableau,65,BI
+BI,Looker Studio,80,BI
+BI,Quicksight,75,BI
+BI,Streamlit,85,BI
+BI,Dash,85,BI
+BI,Apache Superset,50,BI
+DBMS,MySQL,80,DBMS
+DBMS,PostgreSQL,85,DBMS
+DBMS,SQL Server,70,DBMS
+DBMS,Teradata,60,DBMS
+DBMS,MongoDB,60,DBMS
+DBMS,Big Query,90,DBMS
+DBMS,Redshift,70,DBMS
+DBMS,Hive,80,DBMS
+Tech,HTML,60,Tech
+Tech,Microsoft Office,85,Tech
+Tech,Jenkins,65,Tech
+Tech,Docker,60,Tech
+Tech,Jira,60,Tech
+Tech,Bitbucket,80,Tech
+Tech,Git,90,Tech
+Tech,Wiki,75,Tech
+Tech,Windows,95,Tech
+Tech,MacOS,90,Tech
+Tech,Linux,90,Tech
+Tech,Shell,80,Tech
+Tech,Bash,80,Tech
+Learn,Databricks,25,Learning
+Learn,Snowflake,25,Learning
+Learn,Tensorflow,25,Learning
+Learn,N8N,25,Learning
+Languages,Spanish,100,Languages
+Languages,English,85,Languages
+Apache,Airflow,20,Apache
+Apache,Spark,20,Apache
+Apache,HDFS,20,Apache
+Apache,Kafka,20,Apache
+Apache,Hadoop,20,Apache
+Apache,Superset,20,Apache
+Agile,SCRUM,25,Agile
+Agile,Kanban,25,Agile
+Agile,Spotify,25,Agile
+Agile,Lean,25,Agile

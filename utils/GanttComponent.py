@@ -18,7 +18,6 @@ class GanttComponent:
         self.register_callbacks()
 
     def get_layout(self):
-        """Devuelve el layout de los componentes para ser usado en la app."""
         fig = px.timeline(
             self.df,
             x_start="Start",
@@ -38,7 +37,6 @@ class GanttComponent:
         ])
 
     def register_callbacks(self):
-        """Registra el callback de la instancia."""
         @self.app.callback(
             Output(self.output_id, 'children'),
             Input(self.graph_id, 'clickData')
