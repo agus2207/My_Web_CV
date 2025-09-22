@@ -95,5 +95,5 @@ def toggle_sidebar(n_clicks):
         return {'display': 'none'}, CONTENT_STYLE_HIDDEN, html.I(className="bi bi-arrow-right-square")
 
 if __name__ == "__main__":
-    # app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+    # app.run(debug=True)
