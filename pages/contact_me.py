@@ -9,7 +9,7 @@ layout = dbc.Container(
         children=[
             html.H2("Contacto", className="display-4 text-success"),
             html.P("Puedes contactarme a través de este formulario o mis redes sociales.", className="lead"),
-            dbc.Row( # 👈 Usar dbc.Row y dbc.Col para el diseño de columnas
+            dbc.Row(
                 [
                     dbc.Col(html.A("LinkedIn", href="#", className="btn btn-dark"), width=6, className="text-center"),
                     dbc.Col(html.A("GitHub", href="#", className="btn btn-dark"), width=6, className="text-center"),

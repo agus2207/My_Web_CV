@@ -1,6 +1,7 @@
-import numpy as np
-import pandas as pd
-from datetime import datetime
+# import numpy as np
+# import pandas as pd
+import json
+# from datetime import datetime
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 from utils.GanttComponent import *
@@ -8,16 +9,8 @@ from utils.skills import *
 
 dash.register_page(__name__, path='/', name='About Me')
 
-today = datetime.now()
-today_str = today.strftime('%Y-%m-%d')
-
-df = pd.read_csv("assets/datasets/experience.csv", encoding="latin-1", low_memory=False)
-df['Finish'] = np.where(df['Place'].str.contains('Digitas', case=False, na=False), today_str, df['Finish'])
-df['Start_str'] = pd.to_datetime(df['Start'], format='%Y-%m-%d').dt.strftime('%Y-%m-%d')
-df['Finish_str'] = pd.to_datetime(df['Finish'], format='%Y-%m-%d').dt.strftime('%Y-%m-%d')
-
-gantt_trabajo = GanttComponent(dash, df[df['Type'] == 'Work'], id_prefix='gantt-trabajo')
-gantt_educacion = GanttComponent(dash, df[df['Type'] == 'School'], id_prefix='gantt-educacion')
+# gantt_trabajo = GanttComponent(dash, df[df['Type'] == 'Work'], id_prefix='gantt-trabajo')
+# gantt_educacion = GanttComponent(dash, df[df['Type'] == 'School'], id_prefix='gantt-educacion')
 
 layout = dbc.Container(
     html.Div(children=[
@@ -37,9 +30,13 @@ layout = dbc.Container(
 
 @dash.callback(
     dash.Output('tabs-content-example-graph', 'children'),
-    dash.Input('tabs-example-graph', 'value')
+    dash.Input('tabs-example-graph', 'value'),
+    dash.Input('shared-data-store', 'data')
 )
-def render_content(tab):
+def render_content(tab, json_data):
+    if not json_data:
+        return html.Div()
+    data_dict = json.loads(json_data)
     if tab == 'tab-1':
         return html.Div([
             html.P("Contenido para 'About me' (similar a MY_INFO)"),
@@ -49,13 +46,14 @@ def render_content(tab):
         return html.Div([
             html.H3("Education History"),
             html.P("A tour of my academic journey. This interactive timeline summarizes the institutions and programs that have shaped my knowledge, showcasing my key achievements and academic growth over time."),
-            gantt_educacion.get_layout()
+            gantt_layout('2-chart', json.loads(data_dict['fig_edu']), '2-output-text')
         ])
     elif tab == 'tab-3':
         return html.Div([
             html.H3("My Professional Journey"),
             html.P("A tour of my professional history. This interactive timeline summarizes the companies and roles that have defined my career, showcasing my progress and contributions over time."),
-            gantt_trabajo.get_layout()
+            gantt_layout('1-chart', json.loads(data_dict['fig_work']), '1-output-text')
+            # gantt_trabajo.get_layout()
         ])
     elif tab == 'tab-4':
-        return skill_section()
+        return skill_section(data_dict)

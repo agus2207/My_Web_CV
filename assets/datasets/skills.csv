@@ -22,6 +22,9 @@ Cloud APIs,googleapiclient,85,Libraries
 Cloud APIs,mailchimp_marketing,75,Libraries
 Database,psycopg2,85,Libraries
 Database,SQLAlchemy,90,Libraries
+Database,mysql.connector,85,Libraries
+Database,teradatasql,70,Libraries
+Database,pyhive,70,Libraries
 Others,Openpyxl,75,Libraries
 Others,pptx,70,Libraries
 Others,BeautifulSoap,90,Libraries
