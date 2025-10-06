@@ -4,8 +4,6 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import plotly.express as px
-import pandas as pd
-from datetime import datetime
 
 def create_radar(df, title):
     fig = px.line_polar(
@@ -107,7 +105,8 @@ def skill_section(data_strorage):
             dbc.Col(html.Div(dcc.Graph(id='tech', figure=json.loads(data_strorage['fig_tech']))))
         ]),
         dbc.Row([
+            dbc.Col(html.Div(dcc.Graph(id='learning', figure=json.loads(data_strorage['fig_learning'])))),
             dbc.Col(html.Div(dcc.Graph(id='lan', figure=json.loads(data_strorage['fig_lan'])))),
-            dbc.Col(html.Div(dcc.Graph(id='learning', figure=json.loads(data_strorage['fig_learning']))))
+            dbc.Col(html.Div(dcc.Graph(id='learning', figure=json.loads(data_strorage['fig_marketing']))))
         ]),
     ])

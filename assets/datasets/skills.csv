@@ -70,6 +70,7 @@ DBMS,MongoDB,60,DBMS
 DBMS,Big Query,90,DBMS
 DBMS,Redshift,70,DBMS
 DBMS,Hive,80,DBMS
+Tech,ABInitio,60,Tech
 Tech,HTML,60,Tech
 Tech,Microsoft Office,85,Tech
 Tech,Jenkins,65,Tech
@@ -99,3 +100,7 @@ Agile,SCRUM,25,Agile
 Agile,Kanban,25,Agile
 Agile,Spotify,25,Agile
 Agile,Lean,25,Agile
+marketing,Mailchimp,25,Marketing
+marketing,Treasure Data,25,Marketing
+marketing,Salesforce,25,Marketing
+marketing,Abode Campaing,25,Marketing
