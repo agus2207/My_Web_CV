@@ -87,26 +87,26 @@ def skill_section(data_strorage):
             )
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='libraries', figure=json.loads(data_strorage['fig_li']))))
+            dbc.Col(html.Div(dcc.Graph(id='libraries', figure=data_strorage['fig_li'])))
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='planguages', figure=json.loads(data_strorage['fig_pl'])))),
-            dbc.Col(html.Div(dcc.Graph(id='bi', figure=json.loads(data_strorage['fig_bi']))))
+            dbc.Col(html.Div(dcc.Graph(id='planguages', figure=data_strorage['fig_pl']))),
+            dbc.Col(html.Div(dcc.Graph(id='bi', figure=data_strorage['fig_bi'])))
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='apache', figure=json.loads(data_strorage['fig_apache'])))),
-            dbc.Col(html.Div(dcc.Graph(id='sql', figure=json.loads(data_strorage['fig_sql']))))
+            dbc.Col(html.Div(dcc.Graph(id='apache', figure=data_strorage['fig_apache']))),
+            dbc.Col(html.Div(dcc.Graph(id='sql', figure=data_strorage['fig_sql'])))
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='cloud', figure=json.loads(data_strorage['fig_cloud']))))
+            dbc.Col(html.Div(dcc.Graph(id='cloud', figure=data_strorage['fig_cloud'])))
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='agile', figure=json.loads(data_strorage['fig_agile'])))),
-            dbc.Col(html.Div(dcc.Graph(id='tech', figure=json.loads(data_strorage['fig_tech']))))
+            dbc.Col(html.Div(dcc.Graph(id='agile', figure=data_strorage['fig_agile']))),
+            dbc.Col(html.Div(dcc.Graph(id='tech', figure=data_strorage['fig_tech'])))
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='learning', figure=json.loads(data_strorage['fig_learning'])))),
-            dbc.Col(html.Div(dcc.Graph(id='lan', figure=json.loads(data_strorage['fig_lan'])))),
-            dbc.Col(html.Div(dcc.Graph(id='learning', figure=json.loads(data_strorage['fig_marketing']))))
+            dbc.Col(html.Div(dcc.Graph(id='learning', figure=data_strorage['fig_learning']))),
+            dbc.Col(html.Div(dcc.Graph(id='lan', figure=data_strorage['fig_lan']))),
+            dbc.Col(html.Div(dcc.Graph(id='learning', figure=data_strorage['fig_marketing'])))
         ]),
     ])

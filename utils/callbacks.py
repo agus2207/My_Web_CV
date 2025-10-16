@@ -157,29 +157,29 @@ def register_all_callbacks(app, model_load, mlb_load):
         return music_options, film_options
 
     @app.callback(
-        Output('output-resultado', 'children'),
-        Input('boton-enviar', 'n_clicks'),
+        Output('output-prediction', 'children'),
+        Input('send-button', 'n_clicks'),
         Input('shared-data-store', 'data'),
         State('dropdown-music', 'value'),
         State('dropdown-films', 'value')
     )
-    def ejecutar_funcion(n_clicks, json_data, selected_music, selected_films):
+    def svm_prediction(n_clicks, json_data, selected_music, selected_films):
         if n_clicks > 0:
             if selected_music and selected_films:
-                gustos_combinados = [g.strip() + ' (music)' for g in selected_music] + \
+                user_input = [g.strip() + ' (music)' for g in selected_music] + \
                        [g.strip() + ' (film)' for g in selected_films]
-                X_usuario = mlb.transform([gustos_combinados])
-                prediccion = model.predict(X_usuario)
-                scores = model.named_steps['svm'].decision_function(model.named_steps['scaler'].transform(X_usuario))[0]
-                top_indices = np.argsort(scores)[::-1][:1]
-                deidades_posibles = model.named_steps['svm'].classes_[top_indices]
+                X_user = mlb.transform([user_input])
+                # predictions = model.predict(X_user)
+                scores = model.named_steps['svm'].decision_function(model.named_steps['scaler'].transform(X_user))[0]
+                top_god = np.argsort(scores)[::-1][:1]
+                result = model.named_steps['svm'].classes_[top_god]
 
                 data_dict = json.loads(json_data)
                 gods = json.loads(data_dict['df_gods'])
                 lookup_dict = {item[0]: {'Description': item[1], 'Image': item[2], 'Personality': item[3]} for item in gods['data']}
-                description = lookup_dict[deidades_posibles[0]]['Description']
-                image = lookup_dict[deidades_posibles[0]]['Image']
-                personality = lookup_dict[deidades_posibles[0]]['Personality']
+                description = lookup_dict[result[0]]['Description']
+                image = lookup_dict[result[0]]['Image']
+                personality = lookup_dict[result[0]]['Personality']
 
                 return html.Div([
                     dbc.Row([
@@ -190,7 +190,7 @@ def register_all_callbacks(app, model_load, mlb_load):
                         ),
                         dbc.Col(
                             html.Div([
-                                html.H1(f"{deidades_posibles[0]}"),
+                                html.H1(f"{result[0]}"),
                                 html.P(f"{personality}"),
                                 html.P(f"{description}"),
                             ]),

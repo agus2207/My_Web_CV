@@ -2,8 +2,6 @@ import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 import os
-import joblib
-from utils.callbacks import register_all_callbacks
 from utils.constants import SIDEBAR_STYLE, CONTENT_STYLE
 
 app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.LUX, dbc.icons.BOOTSTRAP], suppress_callback_exceptions=True)
@@ -57,9 +55,19 @@ app.layout = html.Div(
     ]
 )
 
-model = joblib.load('assets/datasets/svm_model_gods.pkl')
-mlb = joblib.load('assets/datasets/mlb_gods.pkl')
-register_all_callbacks(app, model, mlb)
+@app.callback(
+    [
+        dash.Output('sidebar', 'style'),
+        dash.Output('page-content', 'style'),
+        dash.Output('toggle-button', 'children')
+    ],
+    [dash.Input('toggle-button', 'n_clicks')]
+)
+def toggle_sidebar(n_clicks):
+    if n_clicks % 2 == 0:
+        return SIDEBAR_STYLE, CONTENT_STYLE, html.I(className="bi bi-arrow-left-square")
+    else:
+        return {'display': 'none'}, CONTENT_STYLE_HIDDEN, html.I(className="bi bi-arrow-right-square")
 
 if __name__ == "__main__":
     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
