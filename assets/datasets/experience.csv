@@ -1,90 +1,118 @@
 Item,Place,Start,Finish,Imagen,Type,Description
 Data Engineer,"Digitas - CDMX, Mexico",2023-09-04,,assets/images/experience/digitas.png,Work,"
-Main activities:
-- Create Python scripts for data processing using libraries like Pandas, Dask, Pyspark.
-- Create SQL queries to search data using SQLAlchemy in Python.
-- Create dashboards for data visualization using plotly, matplotlib, streamlit, PowerBI, Looker Studio.
-- Design and implementation of architectures using cloud services like AWS and Google cloud.
-- Create python scripts to automatizate some daily tasks.
-- Script probabilistic models using scikit-learn
-- Create data pipelines in Python
-- Database design and implementation
-- Collect business requirements from global clients.
+**Main activities**:
+- Developed and optimized Python scripts for large-scale data processing (ETL) using specialized libraries such as Pandas, Dask, and Pyspark.
+- Managed and queried relational data through the creation of complex SQL queries, integrated into Python workflows via SQLAlchemy.
+- Created interactive dashboards and analytical reports for data-driven decision-making using visualization tools (Plotly, Streamlit, Matplotlib) and BI platforms (PowerBI, Looker Studio).
+- Designed and implemented scalable data architectures (serverless, data lakes) on cloud environments (AWS and Google Cloud).
+- Automated critical daily tasks and processes by implementing Python scripts, reducing manual execution time. Automated workflows covered end-to-end data lifecycle, from extracting web data using custom crawlers to the generation of Excel and PowerPoint reports for executive review.
+- Implemented machine learning models and probabilistic analyses using the Scikit-learn library for predicting key business metrics.
+- Built and managed end-to-end Python Data Pipelines for data ingestion, transformation, and loading, utilizing the Apache ecosystem for enhanced efficiency and scalability.
+- Designed and executed relational and non-relational database schemas, ensuring data integrity and optimal performance.
+- Gathered and translated business requirements from global clients into technical specifications for data projects.
 
-Some Projects developed:
-- Create a Web Scrapping using Selenium and BeautifulSoap to extract public metrics of social media posts like Facebook, X, Instagram, Youtube and Pinterest.
-- Create a Dashboard using Streamlit to display data from diferent sources like S3, Google Drive or diferent SQL relational database managements.
-- Automate report creation in Excel or PowerPoint presentations using Python.
-- Create a probabilistic model to measure the probability of a client to buy again a certain product.
-- Create a report and dashboard to mesuare the metrics of diferent marketing strategies.
-- Develop a CRM using AWS service to storage and manipulate data and mailchimp to send masive communications.
-- Create a ETL process using Adobe Campaing to extract data and Python to process it.
+**Some Projects developed**:
+- Developed a comprehensive social media data extraction tool using Selenium and BeautifulSoup to scrape and analyze public metrics from platforms including Facebook, X (Twitter), Instagram, YouTube, and Pinterest.
+- Engineered an interactive data dashboard using Streamlit, integrating data from diverse sources such as AWS S3, Google Drive, and various SQL relational databases.
+- Automated the generation of business reports and presentations in Excel and PowerPoint using Python, significantly reducing manual reporting time.
+- Designed and implemented a probabilistic model to predict the likelihood of repeat purchases by clients for specific products.
+- Created a dynamic report and dashboard for monitoring and analyzing the key performance metrics of various marketing strategies.
+- Developed a Customer Relationship Management (CRM) solution leveraging AWS services for secure data storage and manipulation, and integrated Mailchimp for efficient mass communication campaigns.
+- Established an Extract, Transform, Load (ETL) pipeline utilizing Adobe Campaign for data extraction and Python for subsequent processing and cleaning.
 "
 Software Engineer,"Solera - Seville, Spain",2022-09-19,2023-07-07,assets/images/experience/solera.png,Work,"
-Main activities:
-- Develop backend web APIs with Flask and Django.
-- Develop frontend views with React.
-- Deploy and configure servers using Jenkins.
-- Create scripts for database connections using SQLAlchemy.
-- Create automate test using Selenium.
-- Worked with colleagues across different countries.
-- Collect business requirements from global clients.
+**Main activities**:
+- Developed and maintained robust backend web APIs using Python frameworks such as Flask and Django.
+- Engineered dynamic and responsive frontend views using React.
+- Managed and streamlined application deployment by configuring and utilizing Jenkins for server automation.
+- Created data access scripts and managed database connections efficiently using SQLAlchemy (Object-Relational Mapper).
+- Designed and implemented end-to-end automated testing using Python with Selenium.
+- Collaborated effectively with diverse, international teams (or ""colleagues across different countries"") to ensure project alignment and delivery.
+- Gathered and translated complex business requirements from global clients into technical specifications.
 
-Some Projects developed:
-- Code maintenance and implementation of new features to the main web page product.
-- Automate test with Python and Selenium.
-- Create APIs for data ingestion.
-- Documentation of processes.
-- Build ETL processes.
+**Some Projects developed**:
+- Led the full-cycle code maintenance and feature implementation for the main web product, enhancing core functionality and user experience.
+- Built and maintained a suite of automated tests using Python and Selenium to ensure product quality and stability across releases.
+- Developed high-performance APIs designed for efficient data ingestion and integration with various services.
+- Created comprehensive technical documentation for development processes, architecture, and deployment procedures.
+- Constructed and optimized robust Extract, Transform, Load (ETL) pipelines for data processing and warehousing.
 "
 Data Engineer,"IDS Comercial - CDMX, Mexico",2021-05-03,2022-09-12,assets/images/experience/ids.png,Work,"
-Main activities:
-- Database design and implementation
-- Create Python scripts for data processing.
-- ETL processes using Python and ABInitio.
-- Create SQL queries to search data in diferent database managements.
-- Creation of Linux shell and UNIX scripts.
+**Main activities**:
+- Designed and implemented efficient relational database schemas, ensuring data integrity and optimal performance.
+- Developed high-performance Python scripts for complex data processing, transformation, and analysis tasks.
+- Engineered and maintained robust ETL pipelines using a combination of Python and AB Initio.
+- Wrote and optimized complex SQL queries for data extraction, analysis, and reporting across various database management systems.
+- Developed and maintained automation scripts using Linux Shell and UNIX for system tasks, scheduling, and file manipulation.
 
-Some Projects developed:
-- Migrate a ABInitio process to a Python script.
-- Create a pipeline for an ETL process in Python.
-- Create test cases using pytest.
-- Create entity-relation diagrams for future architecture in relational databases.
+**Some Projects developed**:
+- Successfully migrated a core data process from AB Initio to a Python script, significantly improving execution speed and reducing licensing costs.
+- Architected and built a complete ETL pipeline in Python, from data ingestion to final loading, ensuring scalability and data quality.
+- Created a comprehensive suite of unit and integration tests using Pytest to guarantee code reliability and maintainability.
+- Developed detailed Entity-Relationship (ER) diagrams and data models for future relational database architectures, facilitating system growth and clarity.
 "
 Intern,"Banxico - CDMX, Mexico",2019-08-05,2020-02-03,assets/images/experience/banxico.png,Work,"
-Main activities:
-- Database design and implementation
-- Development of scripts in Java for connecting to databases
-- Linux script test
-- Script updates
+**Main activities**:
+- Designed and implemented robust relational database structures, ensuring integrity and performance for core systems.
+- Developed and maintained Java scripts for secure and efficient database connectivity and data manipulation.
+- Conducted comprehensive testing of Linux shell scripts to validate system performance and reliability.
+- Managed the full lifecycle of script updates and enhancements, improving automation and adapting to new system requirements.
 
-Some Projects developed:
-- Create a data migration from a data source to another one.
-- Desing the new data source for the migration.
+**Some Projects developed**:
+- Executed a complex data migration from a legacy source to a new platform, ensuring zero data loss and maintaining business continuity.
+- Architected and modeled the new target data source for the migration project, optimizing the schema for scalability and future needs.
 "
 Online Course,The Coding School - Online,2020-10-01,2021-05-01,assets/images/school/tcs.png,School,"
 Score: 4.5/5.0
 
 Abilities Acquired:
-- Learn the foundations of quantum computing
-- Build tangible computer science skills
-- Engage in real-world ML applications
-- Learn the foundations of quantum cybersecurity
+
+**Foundational & Technical Skills**
+- Quantum Core Knowledge: Mastered the foundations of quantum computing, including key principles, quantum mechanics prerequisites, and fundamental algorithms.
+- Tangible CS Skills: Developed practical computer science skills applicable to quantum environments, focusing on necessary programming and computational models.
+- Real-World Application (ML): Engaged in developing and applying quantum concepts to real-world Machine Learning (ML) applications, bridging theoretical knowledge with practical implementation.
+
+**Advanced Security Focus**
+-Quantum Cybersecurity: Acquired foundational knowledge in quantum cybersecurity, specifically addressing post-quantum cryptography and security implications for future computational systems.
 "
 Bachelor's Degree in Computer Systems,"ESCOM IPN - CDMX, Mexico",2016-02-08,2020-08-17,assets/images/school/escom.png,School,"
 Score: 8.0/10.0
 
 Abilities Acquired:
-- Identify, model, and solve problems in computational systems by applying knowledge of basic sciences and engineering through development methodologies, results analysis, and decision-making.
-- Develop computational systems according to design processes, quality standards, and process optimization.
-- Integrate leadership skills, effective communication, and collaborative work for task planning, goal achievement, and risk analysis.
-- Assume an ethical and critical attitude in their academic performance, considering its economic, social, and environmental impact, recognizing their need for ongoing development.
+
+**1. Computational Problem-Solving**
+- Complex Problem Modeling: Ability to identify, model, and effectively solve complex problems within computational systems.
+- Engineering Application: Rigorous application of knowledge from basic sciences and engineering principles throughout the development lifecycle.
+- Data-Driven Decisions: Utilizing development methodologies and result analysis to inform and drive strategic decision-making.
+
+**2. System Development & Quality Assurance**
+- Full-Cycle Development: Proficiently developing complete computational systems, from conceptual design to final implementation.
+- Quality & Standards: Ensuring system development adheres to defined design processes and strict quality standards.
+- Process Optimization: Focused on evaluating and applying techniques for process optimization to achieve maximum system efficiency and performance.
+
+**3. Leadership and Ethical Professionalism**
+- Team Leadership: Integrating leadership skills, effective communication, and collaborative work for efficient task planning and goal achievement.
+- Risk Management: Competent in conducting risk analysis to anticipate challenges and mitigate potential negative impacts on projects.
+- Ethical Impact: Maintaining an ethical and critical attitude, considering the economic, social, and environmental impact of technical solutions.
+- Continuous Growth: Recognizing the necessity and actively engaging in ongoing professional development.
 "
 Digital Systems Technician,"CECyT 9 - CDMX, Mexico",2012-08-15,2015-07-15,assets/images/school/cecyt9.png,School,"
 Score: 7.5/10.0
 
 Abilities Acquired:
-- Develop practical systems through the analysis, interpretation, and programming of electronic devices for the implementation of automation and process control applications.
-- Analyze the different types of industrial control and instrumentation systems for the selection, implementation, fault detection, and execution of automated processes, including industrial robotics.
-- Provide preventive and corrective maintenance to the hardware and software of computer equipment, correctly utilizing the tools required to achieve quality work.
+
+**1. Electronic System Development & Programming**
+- System Implementation: Expertise in developing functional, practical systems through the analysis, interpretation, and programming of various electronic devices.
+- Device Programming: Proficient in programming microcontrollers, PLCs (Programmable Logic Controllers), and other electronic devices for specific system logic and control.
+- Application Focus: Translating process requirements into robust, working code for automation and process control applications.
+
+**2. Industrial Automation & Process Control**
+- Industrial Control Analysis: Skilled in analyzing and selecting different types of industrial control and instrumentation systems (e.g., sensors, actuators).
+- Fault Detection & Execution: Capability to implement, manage, and execute automated processes while performing crucial fault detection to prevent downtime.
+- Industrial Robotics: Experience in selecting and integrating industrial control systems, including foundational knowledge and application in industrial robotics.
+
+**3. Hardware and Software Maintenance**
+- Comprehensive Maintenance: Providing specialized preventive and corrective maintenance to the hardware and software components of computer equipment.
+- Tool Proficiency: Correctly utilizing the required diagnostic and repair tools to ensure the quality and longevity of computer and control systems.
+- Operational Reliability: Focusing on ensuring the high performance and operational readiness of supporting IT infrastructure for automation environments.
 "

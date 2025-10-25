@@ -16,6 +16,10 @@ def create_radar(df, title):
         range_r=[0,100],
     )
     fig.update_traces(fill='toself')
+    fig.update_layout(
+        plot_bgcolor="#E9ECEF",
+        paper_bgcolor="#E9ECEF",
+    )
     return fig
 
 def create_map(df, title, constant):
@@ -26,6 +30,10 @@ def create_map(df, title, constant):
         color='domain',
         color_continuous_scale='rdylbu',#RdBu
         title=title
+    )
+    fig.update_layout(
+        plot_bgcolor="#E9ECEF",
+        paper_bgcolor="#E9ECEF",
     )
     return fig
 
@@ -42,6 +50,10 @@ def create_bar(df, title):
         color_continuous_scale=px.colors.sequential.Plasma
     )
     fig.update_layout(xaxis_title="Domain level (%)", yaxis_title="")
+    fig.update_layout(
+        plot_bgcolor="#E9ECEF",
+        paper_bgcolor="#E9ECEF",
+    )
     return fig
 
 def create_pie(df, title):
@@ -53,6 +65,10 @@ def create_pie(df, title):
         hole=.4
     )
     fig.update_traces(textinfo='label', showlegend=False)
+    fig.update_layout(
+        plot_bgcolor="#E9ECEF",
+        paper_bgcolor="#E9ECEF",
+    )
     return fig
 
 def create_timeline(df):
@@ -65,6 +81,10 @@ def create_timeline(df):
         custom_data=["Item", "Place", "Start_str", "Finish_str", "Description", "Imagen"]
     )
     fig.update_yaxes(autorange="reversed")
+    fig.update_layout(
+        plot_bgcolor="#E9ECEF",
+        paper_bgcolor="#E9ECEF",
+    )
     return fig
 
 def gantt_layout(id_gantt, fig, output_id):
@@ -81,32 +101,32 @@ def skill_section(data_strorage):
         dbc.Row([
             dbc.Col(
                 html.Div([
-                    html.H3("Core Competencies"),
+                    html.H3("🎯 Core Competencies"),
                     html.P("Take a look at my skills in a new light. These charts showcase my expertise in the abilities and technologies that define my professional work.")
                 ])
             )
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='libraries', figure=data_strorage['fig_li'])))
+            dbc.Col(html.Div(dcc.Graph(id='libraries', figure=data_strorage['fig_li'])), xs=12)
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='planguages', figure=data_strorage['fig_pl']))),
-            dbc.Col(html.Div(dcc.Graph(id='bi', figure=data_strorage['fig_bi'])))
+            dbc.Col(html.Div(dcc.Graph(id='planguages', figure=data_strorage['fig_pl'])), xs=12, md=6),
+            dbc.Col(html.Div(dcc.Graph(id='bi', figure=data_strorage['fig_bi'])), xs=12, md=6)
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='apache', figure=data_strorage['fig_apache']))),
-            dbc.Col(html.Div(dcc.Graph(id='sql', figure=data_strorage['fig_sql'])))
+            dbc.Col(html.Div(dcc.Graph(id='apache', figure=data_strorage['fig_apache'])), xs=12, md=6),
+            dbc.Col(html.Div(dcc.Graph(id='sql', figure=data_strorage['fig_sql'])), xs=12, md=6)
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='cloud', figure=data_strorage['fig_cloud'])))
+            dbc.Col(html.Div(dcc.Graph(id='cloud', figure=data_strorage['fig_cloud'])), xs=12)
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='agile', figure=data_strorage['fig_agile']))),
-            dbc.Col(html.Div(dcc.Graph(id='tech', figure=data_strorage['fig_tech'])))
+            dbc.Col(html.Div(dcc.Graph(id='agile', figure=data_strorage['fig_agile'])), xs=12, md=6),
+            dbc.Col(html.Div(dcc.Graph(id='tech', figure=data_strorage['fig_tech'])), xs=12, md=6)
         ]),
         dbc.Row([
-            dbc.Col(html.Div(dcc.Graph(id='learning', figure=data_strorage['fig_learning']))),
-            dbc.Col(html.Div(dcc.Graph(id='lan', figure=data_strorage['fig_lan']))),
-            dbc.Col(html.Div(dcc.Graph(id='learning', figure=data_strorage['fig_marketing'])))
+            dbc.Col(html.Div(dcc.Graph(id='learning', figure=data_strorage['fig_learning'])), xs=12, md=4),
+            dbc.Col(html.Div(dcc.Graph(id='lan', figure=data_strorage['fig_lan'])), xs=12, md=4),
+            dbc.Col(html.Div(dcc.Graph(id='learning', figure=data_strorage['fig_marketing'])), xs=12, md=4)
         ]),
     ])

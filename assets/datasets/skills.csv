@@ -31,6 +31,7 @@ Others,BeautifulSoap,90,Libraries
 Others,fitz,70,Libraries
 Others,PySimpleGUI,70,Libraries
 Others,Tkinter,70,Libraries
+Others,Qiskit,60,Libraries
 Programming Languages,Pyhton,95,Programming Languages
 Programming Languages,Java,70,Programming Languages
 Programming Languages,C#,55,Programming Languages
@@ -39,6 +40,7 @@ Programming Languages,C,30,Programming Languages
 Programming Languages,R,60,Programming Languages
 Programming Languages,SQL,90,Programming Languages
 Programming Languages,JavaScript,60,Programming Languages
+Programming Languages,LATEX,60,Programming Languages
 GCP,Google Run,85,Cloud
 GCP,Big Query,90,Cloud
 GCP,Google Storage,80,Cloud
