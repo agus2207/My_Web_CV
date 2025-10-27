@@ -1,10 +1,22 @@
 import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
-import os
+# import os
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from utils.constants import SIDEBAR_STYLE, CONTENT_STYLE, CONTENT_STYLE_HIDDEN, WHATSAPP_ICON, EMAIL_ICON, LINKEDIN_ICON, GITHUB_ICON
 
 app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.LUX, dbc.icons.BOOTSTRAP], suppress_callback_exceptions=True)
+
+server = app.server
+
+limiter = Limiter(
+    get_remote_address,
+    # server,
+    app=server,
+    storage_uri="memory://",
+    default_limits=["5/second"],
+)
 
 sidebar = html.Div(
     [
@@ -86,8 +98,7 @@ def toggle_sidebar(n_clicks):
     prevent_initial_call=True,
 )
 def download_file(n_clicks):
-    # La ruta al archivo estático dentro de la carpeta 'assets'
     return dcc.send_file("assets/CVAgustinGalindoReyes.pdf")
 
-if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+# if __name__ == "__main__":
+#     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
