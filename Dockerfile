@@ -17,4 +17,4 @@ EXPOSE 8080
 # Comando para ejecutar la aplicación
 # CMD ["python3", "app.py"]
 # CMD ["gunicorn", "app:server", "--bind", "0.0.0.0:8080", "--workers", "2"]
-CMD ["gunicorn", "app:server", "--bind", "0.0.0.0:8080", "--workers", "1", "--threads", "4", "--timeout", "0"]
+CMD ["gunicorn", "app:server", "--bind", "0.0.0.0:8080", "--workers", "1", "--threads", "20", "--timeout", "0"]

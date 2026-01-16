@@ -1,6 +1,7 @@
 import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
+from flask_compress import Compress
 # import os
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -8,7 +9,11 @@ from utils.constants import SIDEBAR_STYLE, CONTENT_STYLE, CONTENT_STYLE_HIDDEN, 
 
 app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.LUX, dbc.icons.BOOTSTRAP], suppress_callback_exceptions=True)
 
+app.scripts.config.serve_locally = True
+app.css.config.serve_locally = True
+
 server = app.server
+Compress(server)
 
 limiter = Limiter(
     get_remote_address,
