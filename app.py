@@ -7,7 +7,8 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from utils.constants import SIDEBAR_STYLE, CONTENT_STYLE, CONTENT_STYLE_HIDDEN, WHATSAPP_ICON, EMAIL_ICON, LINKEDIN_ICON, GITHUB_ICON
 
-app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.LUX, dbc.icons.BOOTSTRAP], suppress_callback_exceptions=True)
+app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.LUX, dbc.icons.BOOTSTRAP], suppress_callback_exceptions=True, prevent_initial_callbacks=True, update_title=None,
+    serve_locally=True)
 
 app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
@@ -22,6 +23,12 @@ limiter = Limiter(
     storage_uri="memory://",
     default_limits=["5/second"],
 )
+
+@limiter.request_filter
+def header_whitelist():
+    # Si la ruta contiene '_dash' o 'assets', no aplicar límite
+    from flask import request
+    return any(x in request.path for x in ["_dash-", "assets", "static"])
 
 sidebar = html.Div(
     [
